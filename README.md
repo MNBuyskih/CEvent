@@ -1,7 +1,7 @@
 Custom event mixin
 ==================
 
-Allows for events in their own classes and methods.
+Allow add events in your own classes and functions.
 
 Usage
 -----
@@ -31,3 +31,11 @@ Usage
         alert('Called before logging');
     });
     myVar.myFunction();
+
+Api
+---
+`CEvent.on` - attach event handler. Return event key. Use it for remove (CEvent.off()) method. `CEvent.on(eventName, callbackFunction)`.
+
+`CEvent.trigger` - call event. `CEvent.trigger(eventName, callbackParamsArray)`.
+
+`CEvent.off` - remove event. `CEvent.trigger(eventKey)`.
